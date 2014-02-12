@@ -21,5 +21,4 @@ void drawCircle(float X, float Y, float radius, float xChange, float yChange) {
     drawCircle(X + xChange, Y + yChange, newRadius, xChange, yChange);
   }
 
-
 }

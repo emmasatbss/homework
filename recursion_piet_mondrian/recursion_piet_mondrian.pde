@@ -4,10 +4,14 @@ void setup() {
   background(255);
   strokeWeight(5);
 
-  drawSquares();
+  drawRectangles(width, height);
 }
 
-void drawSquares() {
+//draw rectangles
+//purpose: sub divide a rectangle into four smaller rectangles
+//parameters: rectangleWidth: the width of the rectangle to be sub-divided
+            //rectangleHeight: the height of the rectangle to be sub-divided
+void drawRectangles(float rectangleWidth, float rectangleHeight) {
 
   // declaring variables...
   // type name = ?
@@ -42,4 +46,8 @@ void drawSquares() {
   fill(140, 80, 200);
   //rect(400, 100, 200, 500);
   rect(randomWidth, randomHeight, width - randomWidth, height - randomHeight);
+  
+  //recurse (with an exit condition)
+  
+  //drawRectangles(); with exit condition.
 }
