@@ -48,10 +48,10 @@ void drawTree(int depth, float strokeWeight) {
     translate(50, 0); // translate to end before drawing next Y
     stroke(10, 200, 4); //colour of leaf
     fill(10, 200, 4); //fill leaf green
-    ellipse(21, 10, random(1, 10), 8); //leaf
+    ellipse(21, 10, 4, 8); //leaf
     stroke(30, 180, 20); //colour of leaf
     fill(30, 180, 20); //fill leaf green
-    ellipse(10, 8, random(10, 30), random(2, 60)); //leaf
+    ellipse(10, 8, 18, 24); //leaf
     drawTree(depth-1, strokeWeight*0.8);
     popMatrix();
     
