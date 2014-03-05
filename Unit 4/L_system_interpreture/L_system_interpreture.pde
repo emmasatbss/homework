@@ -15,7 +15,7 @@ int rewriteCount = 0;
 StringDict rules; 
 
 
-//make length of line 300
+//make length of line 150
 int initialLength = 300;
 
 
@@ -137,6 +137,9 @@ void rewriteWord() {
 
 void turtleDraw() {
 
+  //show current length
+  float currentLength = initialLength/pow(3, rewriteCount);
+
   println("about to place turtle");
 
   //make new orgin
@@ -151,9 +154,9 @@ void turtleDraw() {
     if ( newWord.charAt(currentCharacter) == 'F') {
       // replace
 
-      line(0, 0, initialLength, 0);
+      line(0, 0, currentLength, 0);
 
-      translate(initialLength, 0);
+      translate(currentLength, 0);
     } 
     else 
       if ( newWord.charAt(currentCharacter) == '-') {
@@ -161,7 +164,8 @@ void turtleDraw() {
       rotate(radians(angle));
 
       println(newWord.charAt(currentCharacter));
-    } else 
+    } 
+    else 
       if ( newWord.charAt(currentCharacter) == '+') {
 
       rotate(radians(angle*-1));
